@@ -173,13 +173,12 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <table>
 <tr>
 <td align="center"><a href="https://github.com/cofreeman"><img src="https://github.com/cofreeman.png" width="90" alt="cofreeman"/><br /><sub><b>choijungwoo</b><br />cofreeman</sub></a></td>
-<td align="center"><a href="https://github.com/HoFe-U"><img src="https://github.com/HoFe-U.png" width="90" alt="HoFe-U"/><br /><sub><b>HoFe-U</b><br />HoFe-U</sub></a></td>
 <td align="center"><a href="https://github.com/JoisFe"><img src="https://github.com/JoisFe.png" width="90" alt="JoisFe"/><br /><sub><b>JoisFe</b><br />JoisFe</sub></a></td>
 <td align="center"><a href="https://github.com/jun1718"><img src="https://github.com/jun1718.png" width="90" alt="jun1718"/><br /><sub><b>jun1718</b><br />jun1718</sub></a></td>
 <td align="center"><a href="https://github.com/oct-sky-out"><img src="https://github.com/oct-sky-out.png" width="90" alt="oct-sky-out"/><br /><sub><b>Minsu Kim</b><br />oct-sky-out</sub></a></td>
+<td align="center"><a href="https://github.com/qnt012"><img src="https://github.com/qnt012.png" width="90" alt="qnt012"/><br /><sub><b>김보민</b><br />qnt012</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/qnt012"><img src="https://github.com/qnt012.png" width="90" alt="qnt012"/><br /><sub><b>김보민</b><br />qnt012</sub></a></td>
 <td align="center"><a href="https://github.com/semilaver"><img src="https://github.com/semilaver.png" width="90" alt="semilaver"/><br /><sub><b>김세미</b><br />semilaver</sub></a></td>
 </tr>
 </table>
