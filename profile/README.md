@@ -787,7 +787,7 @@ Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결�
 - Repository 주소: https://github.com/nhnacademy-be7-2joping
 - 프로젝트 특징:
   - **초성 검색** — N-gram·Nori·jaso 플러그인 분석기로 형태소·초성·카테고리 검색을 지원하고, 인기도(조회수·좋아요)·신상품·가격·평점·리뷰순 정렬 제공
-  - **프론트까지 이어지는 예외 처리** — 도서 서버가 code·message·type·url·data를 담은 error response를 돌려주면 프론트 서버가 redirect·forward·에러 페이지로 분기
+  - **프론트까지 이어지는 예외 처리** — 도서 서버가 code·message·type·url·data를 담은 error response를 돌려주면 Front 서버가 redirect·forward·에러 페이지로 분기
   - **멀티스레드 생일 쿠폰 배치** — 생일 쿠폰 발급 배치에 스케줄과 멀티스레드를 적용
   - **Redis 기반 토큰·장바구니 중앙화** — JWT를 redis-session으로 관리하고 비동기 요청으로 토큰 재발급, 장바구니 세션도 Redis로 중앙화
   - **배송 날짜 지정과 결제 위젯** — 주문 시 배송 날짜를 지정하고 Toss 결제 위젯으로 결제, NHN Cloud Key Manager로 DB 접속 정보 암호화
