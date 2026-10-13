@@ -123,7 +123,7 @@ NHN Academy Backend·AIoT 과정 수강생들이 기수별 최종 프로젝트�
 
 - 각 팀은 별도의 Organization을 만들어 프로젝트를 진행하며, 게이트웨이/인증/도메인별 API 서버를 repository 단위로 분리하는 **MSA 구조**로 설계했습니다.
 - Backend 과정은 Spring Boot·Spring Cloud 기반 **MSA 서비스**를, AIoT 과정은 IoT 센서 데이터 수집·분석 **관제 플랫폼**을 구축하며, **Spring AI를 활용한 RAG·MCP 등 AI 기능을 접목**하기도 합니다.
-- 스크럼·회의록·위키 등 문서화 repository를 함께 운영하며 실무형 협업 프로세스를 경험했고, 일부 팀은 자체 도메인을 통해 서비스를 배포했습니다. (e2bs.shop, bluebooktle.shop, trillion-book.shop, javame.live 등)
+- 스크럼·회의록·위키 등 문서화 repository를 함께 운영하며 실무형 협업 프로세스를 경험했고, 모든 팀이 자체 도메인으로 서비스를 배포했습니다. (e2bs.shop, bluebooktle.shop, trillion-book.shop, javame.live 등)
 
 > 팀 프로젝트 org 총 **58**개 (Backend **45** · AIoT **13**)
 
