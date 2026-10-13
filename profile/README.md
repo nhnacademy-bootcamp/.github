@@ -3,7 +3,7 @@
 NHN Academy 부트캠프 운영에 사용되는 GitHub Organization입니다.
 Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까지 단계적으로 학습하는 교육용 저장소 모음입니다.
 
-> 전체 **47**개 repository (공개 **6**개 · 비공개 **41**개)
+> 전체 **46**개 repository (공개 **6**개 · 비공개 **40**개)
 >
 > 비공개 repository는 nhnacademy-bootcamp 조직 멤버만 열람할 수 있습니다.
 
@@ -87,7 +87,6 @@ Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까
 | [spring-mvc-todo-exercise](https://github.com/nhnacademy-bootcamp/spring-mvc-todo-exercise) | 비공개 | Spring MVC 기반 TODO API 서버 구현 실습 |
 | [spring-blog](https://github.com/nhnacademy-bootcamp/spring-blog) | 비공개 | 블로그 구현 교재 |
 | [spring-blog-exercise](https://github.com/nhnacademy-bootcamp/spring-blog-exercise) | 비공개 | 블로그 구현 실습 |
-| [hello-spring](https://github.com/nhnacademy-bootcamp/hello-spring) | 비공개 | CI/CD 학습용 샘플 프로젝트 |
 | [project-spring-cloud](https://github.com/nhnacademy-bootcamp/project-spring-cloud) | 비공개 | Spring Cloud 설정 프로젝트 |
 | [shoppingmall-spring-cloud](https://github.com/nhnacademy-bootcamp/shoppingmall-spring-cloud) | 비공개 | Spring Cloud 기반 쇼핑몰 프로젝트 |
 
