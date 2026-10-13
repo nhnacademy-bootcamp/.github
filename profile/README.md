@@ -199,11 +199,14 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 
 <table>
 <tr>
-<td align="center"><a href="https://github.com/uasaha"><img src="https://github.com/uasaha.png" width="90" alt="uasaha"/><br /><sub><b>WoonSeok</b><br />uasaha</sub></a></td>
 <td align="center"><a href="https://github.com/hobby3530"><img src="https://github.com/hobby3530.png" width="90" alt="hobby3530"/><br /><sub><b>정유진</b><br />hobby3530</sub></a></td>
-<td align="center"><a href="https://github.com/unhas01"><img src="https://github.com/unhas01.png" width="90" alt="unhas01"/><br /><sub><b>박경서</b><br />unhas01</sub></a></td>
+<td align="center"><a href="https://github.com/HoFe-U"><img src="https://github.com/HoFe-U.png" width="90" alt="HoFe-U"/><br /><sub><b>HoFe-U</b><br />HoFe-U</sub></a></td>
 <td align="center"><a href="https://github.com/limtaewon"><img src="https://github.com/limtaewon.png" width="90" alt="limtaewon"/><br /><sub><b>limtaewon</b><br />limtaewon</sub></a></td>
 <td align="center"><a href="https://github.com/seohyeon07"><img src="https://github.com/seohyeon07.png" width="90" alt="seohyeon07"/><br /><sub><b>Seohyeon Kim</b><br />seohyeon07</sub></a></td>
+<td align="center"><a href="https://github.com/uasaha"><img src="https://github.com/uasaha.png" width="90" alt="uasaha"/><br /><sub><b>WoonSeok</b><br />uasaha</sub></a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/unhas01"><img src="https://github.com/unhas01.png" width="90" alt="unhas01"/><br /><sub><b>박경서</b><br />unhas01</sub></a></td>
 </tr>
 </table>
 
@@ -219,13 +222,12 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <table>
 <tr>
 <td align="center"><a href="https://github.com/alanhakhyeonsong"><img src="https://github.com/alanhakhyeonsong.png" width="90" alt="alanhakhyeonsong"/><br /><sub><b>HakHyeon Song</b><br />alanhakhyeonsong</sub></a></td>
-<td align="center"><a href="https://github.com/DoBinShin"><img src="https://github.com/DoBinShin.png" width="90" alt="DoBinShin"/><br /><sub><b>DoBinShin</b><br />DoBinShin</sub></a></td>
 <td align="center"><a href="https://github.com/mongmeo-dev"><img src="https://github.com/mongmeo-dev.png" width="90" alt="mongmeo-dev"/><br /><sub><b>HongDae Kim</b><br />mongmeo-dev</sub></a></td>
 <td align="center"><a href="https://github.com/narangd0"><img src="https://github.com/narangd0.png" width="90" alt="narangd0"/><br /><sub><b>Minji Seo</b><br />narangd0</sub></a></td>
 <td align="center"><a href="https://github.com/ssun4098"><img src="https://github.com/ssun4098.png" width="90" alt="ssun4098"/><br /><sub><b>김선홍</b><br />ssun4098</sub></a></td>
+<td align="center"><a href="https://github.com/suhanBae1201"><img src="https://github.com/suhanBae1201.png" width="90" alt="suhanBae1201"/><br /><sub><b>suhanBae</b><br />suhanBae1201</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/suhanBae1201"><img src="https://github.com/suhanBae1201.png" width="90" alt="suhanBae1201"/><br /><sub><b>suhanBae</b><br />suhanBae1201</sub></a></td>
 <td align="center"><a href="https://github.com/SuJeong68"><img src="https://github.com/SuJeong68.png" width="90" alt="SuJeong68"/><br /><sub><b>이수정</b><br />SuJeong68</sub></a></td>
 <td align="center"><a href="https://github.com/Yellin36"><img src="https://github.com/Yellin36.png" width="90" alt="Yellin36"/><br /><sub><b>Yerin Choi</b><br />Yellin36</sub></a></td>
 </tr>
@@ -243,10 +245,13 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 
 <table>
 <tr>
+<td align="center"><a href="https://github.com/Com-Sun"><img src="https://github.com/Com-Sun.png" width="90" alt="Com-Sun"/><br /><sub><b>comsun</b><br />Com-Sun</sub></a></td>
 <td align="center"><a href="https://github.com/devel0624"><img src="https://github.com/devel0624.png" width="90" alt="devel0624"/><br /><sub><b>devel0624</b><br />devel0624</sub></a></td>
 <td align="center"><a href="https://github.com/Kurmarkpzgr"><img src="https://github.com/Kurmarkpzgr.png" width="90" alt="Kurmarkpzgr"/><br /><sub><b>최규태</b><br />Kurmarkpzgr</sub></a></td>
 <td align="center"><a href="https://github.com/ojh789ojh"><img src="https://github.com/ojh789ojh.png" width="90" alt="ojh789ojh"/><br /><sub><b>joonhoo oh</b><br />ojh789ojh</sub></a></td>
 <td align="center"><a href="https://github.com/opgumo3"><img src="https://github.com/opgumo3.png" width="90" alt="opgumo3"/><br /><sub><b>Gumo</b><br />opgumo3</sub></a></td>
+</tr>
+<tr>
 <td align="center"><a href="https://github.com/tmddk512"><img src="https://github.com/tmddk512.png" width="90" alt="tmddk512"/><br /><sub><b>Yang Seung A</b><br />tmddk512</sub></a></td>
 </tr>
 </table>
@@ -263,9 +268,12 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <table>
 <tr>
 <td align="center"><a href="https://github.com/JeongJaew0n"><img src="https://github.com/JeongJaew0n.png" width="90" alt="JeongJaew0n"/><br /><sub><b>HeLLo2</b><br />JeongJaew0n</sub></a></td>
+<td align="center"><a href="https://github.com/jun1718"><img src="https://github.com/jun1718.png" width="90" alt="jun1718"/><br /><sub><b>jun1718</b><br />jun1718</sub></a></td>
 <td align="center"><a href="https://github.com/MyeoungDev"><img src="https://github.com/MyeoungDev.png" width="90" alt="MyeoungDev"/><br /><sub><b>Kang Myeong Gwan</b><br />MyeoungDev</sub></a></td>
 <td align="center"><a href="https://github.com/sdh46"><img src="https://github.com/sdh46.png" width="90" alt="sdh46"/><br /><sub><b>sdh</b><br />sdh46</sub></a></td>
 <td align="center"><a href="https://github.com/suynnn"><img src="https://github.com/suynnn.png" width="90" alt="suynnn"/><br /><sub><b>Suyeon Noh</b><br />suynnn</sub></a></td>
+</tr>
+<tr>
 <td align="center"><a href="https://github.com/yihoney"><img src="https://github.com/yihoney.png" width="90" alt="yihoney"/><br /><sub><b>이하늬</b><br />yihoney</sub></a></td>
 </tr>
 </table>
@@ -305,7 +313,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <td align="center"><a href="https://github.com/hanjaewoo98"><img src="https://github.com/hanjaewoo98.png" width="90" alt="hanjaewoo98"/><br /><sub><b>한제우</b><br />hanjaewoo98</sub></a></td>
 <td align="center"><a href="https://github.com/khj1994"><img src="https://github.com/khj1994.png" width="90" alt="khj1994"/><br /><sub><b>김현준</b><br />khj1994</sub></a></td>
 <td align="center"><a href="https://github.com/lightbell03"><img src="https://github.com/lightbell03.png" width="90" alt="lightbell03"/><br /><sub><b>김종명</b><br />lightbell03</sub></a></td>
-<td align="center"><a href="https://github.com/sora0303"><img src="https://github.com/sora0303.png" width="90" alt="sora0303"/><br /><sub><b>이소라</b><br />sora0303</sub></a></td>
+<td align="center"><a href="https://github.com/sora0303"><img src="https://github.com/sora0303.png" width="90" alt="sora0303"/><br /><sub><b>이소라</b><br />sora0303</sub></a></td>
 </tr>
 </table>
 
@@ -688,10 +696,9 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <td align="center"><a href="https://github.com/gimalgosa0514"><img src="https://github.com/gimalgosa0514.png" width="90" alt="gimalgosa0514"/><br /><sub><b>Huimang</b><br />gimalgosa0514</sub></a></td>
 <td align="center"><a href="https://github.com/hoohsh"><img src="https://github.com/hoohsh.png" width="90" alt="hoohsh"/><br /><sub><b>hoohsh</b><br />hoohsh</sub></a></td>
 <td align="center"><a href="https://github.com/HyunKN"><img src="https://github.com/HyunKN.png" width="90" alt="HyunKN"/><br /><sub><b>HyunKN</b><br />HyunKN</sub></a></td>
-<td align="center"><a href="https://github.com/jiwoongSon"><img src="https://github.com/jiwoongSon.png" width="90" alt="jiwoongSon"/><br /><sub><b>jiwoongSon</b><br />jiwoongSon</sub></a></td>
+<td align="center"><a href="https://github.com/mingjji"><img src="https://github.com/mingjji.png" width="90" alt="mingjji"/><br /><sub><b>민지</b><br />mingjji</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/mingjji"><img src="https://github.com/mingjji.png" width="90" alt="mingjji"/><br /><sub><b>민지</b><br />mingjji</sub></a></td>
 <td align="center"><a href="https://github.com/win929"><img src="https://github.com/win929.png" width="90" alt="win929"/><br /><sub><b>Eojin Lee</b><br />win929</sub></a></td>
 <td align="center"><a href="https://github.com/yuhyunchoi"><img src="https://github.com/yuhyunchoi.png" width="90" alt="yuhyunchoi"/><br /><sub><b>yuhyunchoi</b><br />yuhyunchoi</sub></a></td>
 </tr>
@@ -738,7 +745,6 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <td align="center"><a href="https://github.com/kyubinleee"><img src="https://github.com/kyubinleee.png" width="90" alt="kyubinleee"/><br /><sub><b>kyubinleee</b><br />kyubinleee</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/kyubinleeee"><img src="https://github.com/kyubinleeee.png" width="90" alt="kyubinleeee"/><br /><sub><b>kyubinleeee</b><br />kyubinleeee</sub></a></td>
 <td align="center"><a href="https://github.com/noah-cha"><img src="https://github.com/noah-cha.png" width="90" alt="noah-cha"/><br /><sub><b>noahchae</b><br />noah-cha</sub></a></td>
 <td align="center"><a href="https://github.com/Que-Sera-Sera-Today"><img src="https://github.com/Que-Sera-Sera-Today.png" width="90" alt="Que-Sera-Sera-Today"/><br /><sub><b>Que-Sera-Sera-Today</b><br />Que-Sera-Sera-Today</sub></a></td>
 <td align="center"><a href="https://github.com/whskgys"><img src="https://github.com/whskgys.png" width="90" alt="whskgys"/><br /><sub><b>whskgys</b><br />whskgys</sub></a></td>
@@ -827,7 +833,6 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 </tr>
 <tr>
 <td align="center"><a href="https://github.com/moooooooonlight"><img src="https://github.com/moooooooonlight.png" width="90" alt="moooooooonlight"/><br /><sub><b>권용민</b><br />moooooooonlight</sub></a></td>
-<td align="center"><a href="https://github.com/neamoo"><img src="https://github.com/neamoo.png" width="90" alt="neamoo"/><br /><sub><b>neamoo</b><br />neamoo</sub></a></td>
 <td align="center"><a href="https://github.com/snackcookie"><img src="https://github.com/snackcookie.png" width="90" alt="snackcookie"/><br /><sub><b>Lee MinHu</b><br />snackcookie</sub></a></td>
 </tr>
 </table>
@@ -994,7 +999,6 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <tr>
 <td align="center"><a href="https://github.com/won-ee"><img src="https://github.com/won-ee.png" width="90" alt="won-ee"/><br /><sub><b>won-ee</b><br />won-ee</sub></a></td>
 <td align="center"><a href="https://github.com/yang-jaewon"><img src="https://github.com/yang-jaewon.png" width="90" alt="yang-jaewon"/><br /><sub><b>양재원</b><br />yang-jaewon</sub></a></td>
-<td align="center"><a href="https://github.com/yeong-dae"><img src="https://github.com/yeong-dae.png" width="90" alt="yeong-dae"/><br /><sub><b>yeong-dae</b><br />yeong-dae</sub></a></td>
 </tr>
 </table>
 
@@ -1045,6 +1049,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <tr>
 <td align="center"><a href="https://github.com/kiju-dev"><img src="https://github.com/kiju-dev.png" width="90" alt="kiju-dev"/><br /><sub><b>kiju-dev</b><br />kiju-dev</sub></a></td>
 <td align="center"><a href="https://github.com/KKahyun"><img src="https://github.com/KKahyun.png" width="90" alt="KKahyun"/><br /><sub><b>KKahyun</b><br />KKahyun</sub></a></td>
+<td align="center"><a href="https://github.com/taketaektech"><img src="https://github.com/taketaektech.png" width="90" alt="taketaektech"/><br /><sub><b>Yongtaek Lee</b><br />taketaektech</sub></a></td>
 <td align="center"><a href="https://github.com/Yoon-Bin99"><img src="https://github.com/Yoon-Bin99.png" width="90" alt="Yoon-Bin99"/><br /><sub><b>YoonBin</b><br />Yoon-Bin99</sub></a></td>
 </tr>
 </table>
@@ -1164,10 +1169,11 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/badgelatte"><img src="https://github.com/badgelatte.png" width="90" alt="badgelatte"/><br /><sub><b>Lee Jihyeon</b><br />badgelatte</sub></a></td>
 <td align="center"><a href="https://github.com/chaehyonNa"><img src="https://github.com/chaehyonNa.png" width="90" alt="chaehyonNa"/><br /><sub><b>나채현</b><br />chaehyonNa</sub></a></td>
 <td align="center"><a href="https://github.com/HyeonSeon9"><img src="https://github.com/HyeonSeon9.png" width="90" alt="HyeonSeon9"/><br /><sub><b>HyeonSeong</b><br />HyeonSeon9</sub></a></td>
+<td align="center"><a href="https://github.com/insub2004"><img src="https://github.com/insub2004.png" width="90" alt="insub2004"/><br /><sub><b>윤인섭</b><br />insub2004</sub></a></td>
 <td align="center"><a href="https://github.com/JongbeenPark"><img src="https://github.com/JongbeenPark.png" width="90" alt="JongbeenPark"/><br /><sub><b>JongbeenPark</b><br />JongbeenPark</sub></a></td>
-<td align="center"><a href="https://github.com/kkh5535"><img src="https://github.com/kkh5535.png" width="90" alt="kkh5535"/><br /><sub><b>강경훈</b><br />kkh5535</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/kkh5535"><img src="https://github.com/kkh5535.png" width="90" alt="kkh5535"/><br /><sub><b>강경훈</b><br />kkh5535</sub></a></td>
 <td align="center"><a href="https://github.com/Mizz1ove"><img src="https://github.com/Mizz1ove.png" width="90" alt="Mizz1ove"/><br /><sub><b>박상진</b><br />Mizz1ove</sub></a></td>
 <td align="center"><a href="https://github.com/SeinJs"><img src="https://github.com/SeinJs.png" width="90" alt="SeinJs"/><br /><sub><b>SeinJs_Stash</b><br />SeinJs</sub></a></td>
 </tr>
@@ -1185,10 +1191,11 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/GaHyoung"><img src="https://github.com/GaHyoung.png" width="90" alt="GaHyoung"/><br /><sub><b>남가형</b><br />GaHyoung</sub></a></td>
 <td align="center"><a href="https://github.com/GGilook"><img src="https://github.com/GGilook.png" width="90" alt="GGilook"/><br /><sub><b>서길우</b><br />GGilook</sub></a></td>
 <td align="center"><a href="https://github.com/halo-eunsu"><img src="https://github.com/halo-eunsu.png" width="90" alt="halo-eunsu"/><br /><sub><b>Eunsu</b><br />halo-eunsu</sub></a></td>
+<td align="center"><a href="https://github.com/j00hyeon"><img src="https://github.com/j00hyeon.png" width="90" alt="j00hyeon"/><br /><sub><b>이주현</b><br />j00hyeon</sub></a></td>
 <td align="center"><a href="https://github.com/jjunho50"><img src="https://github.com/jjunho50.png" width="90" alt="jjunho50"/><br /><sub><b>jjunho50</b><br />jjunho50</sub></a></td>
-<td align="center"><a href="https://github.com/jongsikk"><img src="https://github.com/jongsikk.png" width="90" alt="jongsikk"/><br /><sub><b>jongsikk</b><br />jongsikk</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/jongsikk"><img src="https://github.com/jongsikk.png" width="90" alt="jongsikk"/><br /><sub><b>jongsikk</b><br />jongsikk</sub></a></td>
 <td align="center"><a href="https://github.com/pass0210"><img src="https://github.com/pass0210.png" width="90" alt="pass0210"/><br /><sub><b>박상원</b><br />pass0210</sub></a></td>
 <td align="center"><a href="https://github.com/woooyas"><img src="https://github.com/woooyas.png" width="90" alt="woooyas"/><br /><sub><b>지민</b><br />woooyas</sub></a></td>
 </tr>
@@ -1232,6 +1239,9 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/chanhwiim"><img src="https://github.com/chanhwiim.png" width="90" alt="chanhwiim"/><br /><sub><b>chanhwiim</b><br />chanhwiim</sub></a></td>
 <td align="center"><a href="https://github.com/ckddms6530"><img src="https://github.com/ckddms6530.png" width="90" alt="ckddms6530"/><br /><sub><b>RYU CHANGEUN</b><br />ckddms6530</sub></a></td>
 <td align="center"><a href="https://github.com/jki12"><img src="https://github.com/jki12.png" width="90" alt="jki12"/><br /><sub><b>jki12</b><br />jki12</sub></a></td>
+<td align="center"><a href="https://github.com/pangpangE123"><img src="https://github.com/pangpangE123.png" width="90" alt="pangpangE123"/><br /><sub><b>변상우</b><br />pangpangE123</sub></a></td>
+</tr>
+<tr>
 <td align="center"><a href="https://github.com/qaw302"><img src="https://github.com/qaw302.png" width="90" alt="qaw302"/><br /><sub><b>박미정</b><br />qaw302</sub></a></td>
 </tr>
 </table>
@@ -1350,9 +1360,10 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/erase1657"><img src="https://github.com/erase1657.png" width="90" alt="erase1657"/><br /><sub><b>박지우</b><br />erase1657</sub></a></td>
 <td align="center"><a href="https://github.com/jjh1228"><img src="https://github.com/jjh1228.png" width="90" alt="jjh1228"/><br /><sub><b>jjh1228</b><br />jjh1228</sub></a></td>
 <td align="center"><a href="https://github.com/kitturamiboiler"><img src="https://github.com/kitturamiboiler.png" width="90" alt="kitturamiboiler"/><br /><sub><b>m00n</b><br />kitturamiboiler</sub></a></td>
-<td align="center"><a href="https://github.com/sy-103"><img src="https://github.com/sy-103.png" width="90" alt="sy-103"/><br /><sub><b>sy-103</b><br />sy-103</sub></a></td>
+<td align="center"><a href="https://github.com/Quasimorphism"><img src="https://github.com/Quasimorphism.png" width="90" alt="Quasimorphism"/><br /><sub><b>SangMin Park</b><br />Quasimorphism</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/sy-103"><img src="https://github.com/sy-103.png" width="90" alt="sy-103"/><br /><sub><b>sy-103</b><br />sy-103</sub></a></td>
 <td align="center"><a href="https://github.com/woalshue"><img src="https://github.com/woalshue.png" width="90" alt="woalshue"/><br /><sub><b>손재민 (Jaemin Son)</b><br />woalshue</sub></a></td>
 <td align="center"><a href="https://github.com/yjKang02"><img src="https://github.com/yjKang02.png" width="90" alt="yjKang02"/><br /><sub><b>YJ Kang</b><br />yjKang02</sub></a></td>
 </tr>
@@ -1371,11 +1382,13 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/JAENA216"><img src="https://github.com/JAENA216.png" width="90" alt="JAENA216"/><br /><sub><b>JAENA</b><br />JAENA216</sub></a></td>
 <td align="center"><a href="https://github.com/jeongmin26"><img src="https://github.com/jeongmin26.png" width="90" alt="jeongmin26"/><br /><sub><b>jeongmin26</b><br />jeongmin26</sub></a></td>
 <td align="center"><a href="https://github.com/likeironbasic"><img src="https://github.com/likeironbasic.png" width="90" alt="likeironbasic"/><br /><sub><b>choii</b><br />likeironbasic</sub></a></td>
-<td align="center"><a href="https://github.com/pp0ng"><img src="https://github.com/pp0ng.png" width="90" alt="pp0ng"/><br /><sub><b>taehee</b><br />pp0ng</sub></a></td>
+<td align="center"><a href="https://github.com/onyune"><img src="https://github.com/onyune.png" width="90" alt="onyune"/><br /><sub><b>onyune</b><br />onyune</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/pp0ng"><img src="https://github.com/pp0ng.png" width="90" alt="pp0ng"/><br /><sub><b>taehee</b><br />pp0ng</sub></a></td>
 <td align="center"><a href="https://github.com/shinjunsik"><img src="https://github.com/shinjunsik.png" width="90" alt="shinjunsik"/><br /><sub><b>Shin junsik</b><br />shinjunsik</sub></a></td>
 <td align="center"><a href="https://github.com/Uoo-uu"><img src="https://github.com/Uoo-uu.png" width="90" alt="Uoo-uu"/><br /><sub><b>Uoo-uu</b><br />Uoo-uu</sub></a></td>
+<td align="center"><a href="https://github.com/yooncy123"><img src="https://github.com/yooncy123.png" width="90" alt="yooncy123"/><br /><sub><b>yooncy</b><br />yooncy123</sub></a></td>
 </tr>
 </table>
 
@@ -1398,6 +1411,7 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/kjs31602"><img src="https://github.com/kjs31602.png" width="90" alt="kjs31602"/><br /><sub><b>kjs31602</b><br />kjs31602</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/Poly-Etilen"><img src="https://github.com/Poly-Etilen.png" width="90" alt="Poly-Etilen"/><br /><sub><b>Jinyeong</b><br />Poly-Etilen</sub></a></td>
 <td align="center"><a href="https://github.com/rnrn428"><img src="https://github.com/rnrn428.png" width="90" alt="rnrn428"/><br /><sub><b>JaeUng</b><br />rnrn428</sub></a></td>
 <td align="center"><a href="https://github.com/seoyoung3907"><img src="https://github.com/seoyoung3907.png" width="90" alt="seoyoung3907"/><br /><sub><b>seoyoung3907</b><br />seoyoung3907</sub></a></td>
 <td align="center"><a href="https://github.com/ysh011130"><img src="https://github.com/ysh011130.png" width="90" alt="ysh011130"/><br /><sub><b>ysh011130</b><br />ysh011130</sub></a></td>
@@ -1420,9 +1434,10 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/hiadela0802"><img src="https://github.com/hiadela0802.png" width="90" alt="hiadela0802"/><br /><sub><b>String6</b><br />hiadela0802</sub></a></td>
 <td align="center"><a href="https://github.com/Jungeunsun565"><img src="https://github.com/Jungeunsun565.png" width="90" alt="Jungeunsun565"/><br /><sub><b>Jungeunsun565</b><br />Jungeunsun565</sub></a></td>
 <td align="center"><a href="https://github.com/naeun912"><img src="https://github.com/naeun912.png" width="90" alt="naeun912"/><br /><sub><b>naeun912</b><br />naeun912</sub></a></td>
-<td align="center"><a href="https://github.com/SRIOUSS"><img src="https://github.com/SRIOUSS.png" width="90" alt="SRIOUSS"/><br /><sub><b>SRIOUSS</b><br />SRIOUSS</sub></a></td>
+<td align="center"><a href="https://github.com/OiJs"><img src="https://github.com/OiJs.png" width="90" alt="OiJs"/><br /><sub><b>OiJs</b><br />OiJs</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/SRIOUSS"><img src="https://github.com/SRIOUSS.png" width="90" alt="SRIOUSS"/><br /><sub><b>SRIOUSS</b><br />SRIOUSS</sub></a></td>
 <td align="center"><a href="https://github.com/Wjdwodud2525"><img src="https://github.com/Wjdwodud2525.png" width="90" alt="Wjdwodud2525"/><br /><sub><b>JJY</b><br />Wjdwodud2525</sub></a></td>
 <td align="center"><a href="https://github.com/wognlrla"><img src="https://github.com/wognlrla.png" width="90" alt="wognlrla"/><br /><sub><b>JJ</b><br />wognlrla</sub></a></td>
 </tr>
@@ -1444,9 +1459,11 @@ AIoT 과정의 최종 팀 프로젝트는 IoT 센서 데이터 수집·관제 �
 <td align="center"><a href="https://github.com/Duwing"><img src="https://github.com/Duwing.png" width="90" alt="Duwing"/><br /><sub><b>Seongjun</b><br />Duwing</sub></a></td>
 <td align="center"><a href="https://github.com/gogooga1"><img src="https://github.com/gogooga1.png" width="90" alt="gogooga1"/><br /><sub><b>정영우</b><br />gogooga1</sub></a></td>
 <td align="center"><a href="https://github.com/h-bo-ram"><img src="https://github.com/h-bo-ram.png" width="90" alt="h-bo-ram"/><br /><sub><b>hong-boram</b><br />h-bo-ram</sub></a></td>
-<td align="center"><a href="https://github.com/mazzi333"><img src="https://github.com/mazzi333.png" width="90" alt="mazzi333"/><br /><sub><b>mazzi333</b><br />mazzi333</sub></a></td>
+<td align="center"><a href="https://github.com/konayeong"><img src="https://github.com/konayeong.png" width="90" alt="konayeong"/><br /><sub><b>konayeong</b><br />konayeong</sub></a></td>
 </tr>
 <tr>
+<td align="center"><a href="https://github.com/mazzi333"><img src="https://github.com/mazzi333.png" width="90" alt="mazzi333"/><br /><sub><b>mazzi333</b><br />mazzi333</sub></a></td>
 <td align="center"><a href="https://github.com/qkr13qkr"><img src="https://github.com/qkr13qkr.png" width="90" alt="qkr13qkr"/><br /><sub><b>qkr13qkr</b><br />qkr13qkr</sub></a></td>
+<td align="center"><a href="https://github.com/Splleat"><img src="https://github.com/Splleat.png" width="90" alt="Splleat"/><br /><sub><b>Kang Byeongho</b><br />Splleat</sub></a></td>
 </tr>
 </table>
