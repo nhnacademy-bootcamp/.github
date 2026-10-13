@@ -102,7 +102,7 @@ Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까
 
 | Repository | 공개 여부 | 설명 |
 |---|:---:|---|
-| [java-dev-settings](https://github.com/nhnacademy-bootcamp/java-dev-settings) | 비공개 | 개발 환경설정 가이드 |
+| [java-dev-settings](https://github.com/nhnacademy-bootcamp/java-dev-settings) | 비공개 | 개발 환경 설정 가이드 |
 | [project-ci-cd](https://github.com/nhnacademy-bootcamp/project-ci-cd) | 비공개 | CI/CD 파이프라인 구축 |
 | [sonarqube-test-coverage](https://github.com/nhnacademy-bootcamp/sonarqube-test-coverage) | 비공개 | SonarQube를 이용한 정적 분석과 Test Coverage 측정 |
 | [common-infra-config-server](https://github.com/nhnacademy-bootcamp/common-infra-config-server) | 비공개 | Spring Cloud Config Server 공통 인프라 |
@@ -142,9 +142,9 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 - Repository 주소: https://github.com/on-7
 - 프로젝트 특징:
   - **오타·자동완성까지 다룬 검색** — 상품과 고객센터 게시글에 영/한 오타 변환, 동의어·연관어, 자동완성, 카테고리 내 가격별 검색을 적용하고, 자체 트랜잭션이 없는 Elasticsearch는 Logstash 주기 동기화로 MySQL과 정합성을 맞추며 X-Pack으로 보안 활성화
-  - **저장소를 갈아 끼우는 파일 관리** — 빈을 동적으로 주입해 로컬 디스크와 NHN Cloud Object Storage 중 하나를 골라 쓰도록 설계해 기존 코드 변경 없이 클라우드로 이전, Toast UI Editor hook으로 이미지를 먼저 올리고 본문에는 URL만 저장
+  - **저장소를 갈아 끼우는 파일 관리** — 빈을 동적으로 주입해 로컬 디스크와 NHN Cloud Object Storage 중 하나를 골라 쓰도록 설계해 기존 코드 변경 없이 클라우드로 이전, TOAST UI Editor hook으로 이미지를 먼저 올리고 본문에는 URL만 저장
   - **이벤트로 움직이는 쿠폰 지급** — 회원가입·베스트 후기 선정은 Spring Event, 생일 쿠폰은 Scheduler, 매월 1일 등급 갱신과 등급별 쿠폰은 Batch + Scheduler로 나누어 자동 지급
-  - **서명 검증을 더한 설정 서버** — 외부 저장소로 분리한 Spring Cloud Config에 **ECDSA** 서명을 적용하고, NGINX에서 서브 도메인 분기와 버전 정보 숨김 처리
+  - **서명 검증을 더한 설정 서버** — 외부 저장소로 분리한 Spring Cloud Config에 **ECDSA** 서명을 적용하고, Nginx에서 서브도메인 분기와 버전 정보 숨김 처리
   - **GG 패스와 고객센터** — 구독 신청·해지·갱신일 확인, 공지사항·1:1 문의·FAQ 세 게시판을 하나의 서비스 메서드로 통합 처리하고 `@RoleCheck`로 막지 못하는 권한은 서비스 계층에서 검사
 
 <table>
@@ -226,7 +226,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 - 프로젝트 특징:
   - **부하 테스트로 검증한 쿠폰 발행** — Kafka로 쇼핑 서버와 쿠폰 서버를 비동기 연결하고 마이크로서비스 간 트랜잭션 보장을 설계, 쿠폰 발행 API가 20분간 vUsers 12,000에서 TPS 392를 기록했으며 Redis로 짧은 시간 내 중복 발행 요청을 걸러내고 MyBatis Bulk Insert 적용
   - **결제 롤백 트러블슈팅** — DB는 롤백됐는데 Toss 결제는 이미 승인된 상황을 `TransactionEventListener`의 `AFTER_ROLLBACK` 단계에서 결제 취소로 맞춤
-  - **웹소켓 서버 분리** — 이중화된 서버에서 대상 클라이언트에게 메시지가 닿지 않는 문제를 Redis Pub/Sub으로 먼저 풀었다가, 복잡도와 연결 유지 부담 때문에 Spring Websocket·SockJS·STOMP 전용 서버로 분리
+  - **웹소켓 서버 분리** — 이중화된 서버에서 대상 클라이언트에게 메시지가 닿지 않는 문제를 Redis Pub/Sub으로 먼저 풀었다가, 복잡도와 연결 유지 부담 때문에 Spring WebSocket·SockJS·STOMP 전용 서버로 분리
   - **인가 책임 재배치** — 게이트웨이의 인증 필터를 걷어내 라우팅·로깅만 맡기고, Shop 서버가 JWT 검증을 Auth 서버에 위임해 받은 payload로 `Authentication`을 직접 생성, Method Security와 AOP로 본인 개인정보 API 노출을 최소화
   - **Shop 서버 커버리지 87.11%** — 라인 커버리지 목표 80%를 넘겼고, NHN Cloud Log & Crash와 Grafana로 서버를 모니터링
   - **배치로 돌리는 주문·구독 운영** — 3일간 다른 상태 이력이 없는 주문을 자정마다 취소 처리하고, 구독 갱신 1달·1주·1일 전 Dooray 훅으로 알림, `CompositeItemWriter`로 등급 갱신과 이력 기록을 한 번에 수행
@@ -255,7 +255,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 - 프로젝트 특징:
   - **쿠폰존과 쿠폰 전용 서버** — 정액·정률·포인트 충전 쿠폰을 상품·카테고리·장바구니 단위로 발급하고, 이달의 쿠폰·등급별·무제한 쿠폰을 쿠폰존에 올려 사용자가 직접 받게 했으며, 수량 제한 쿠폰은 Kafka로 처리
   - **작가가 답하는 문의 게시판** — 상품문의는 관리자·사용자·작가가 함께 쓰고 작가는 본인 서적 문의에 답변, 공지사항과 권한·댓글 허용을 달리한 계층형 게시판으로 설계
-  - **무중단 배포와 서버 상태 관측** — Jenkins·GitHub Action으로 무중단 배포를 구성하고 Eureka health check와 NHN Cloud Log & Crash로 상태를 확인
+  - **무중단 배포와 서버 상태 관측** — Jenkins·GitHub Actions로 무중단 배포를 구성하고 Eureka health check와 NHN Cloud Log & Crash로 상태를 확인
   - **비회원도 담는 장바구니** — 장바구니를 Redis에 두어 비회원 주문을 지원하고, 메인 페이지와 각 목록의 첫 페이지를 Redis로 캐싱
   - **3개까지 붙는 카테고리 검색** — 2단계 카테고리를 상품당 최대 3개까지 연결하고 Elasticsearch로 키워드·제목·작가명·카테고리를 검색, GitHub OAuth 로그인 지원
 
@@ -282,7 +282,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
   - **상태 기반 환불과 복구** — 결제완료·배송대기·배송완료 상태에서만 환불을 허용하고 환불 시 사용한 쿠폰과 포인트를 복구, 신용카드 결제·취소·환불과 비회원 주문 지원
   - **예약형·등급형 이달의 쿠폰** — 일반·웰컴·생일 쿠폰에 더해 이달의 쿠폰을 예약형과 등급형으로 나누어 운영하고, 배치로 등급 승급·매월 1일 포인트 충전·생일 쿠폰 지급
   - **배송 접수일 예약** — 배송 더미 서버를 두고 배송 등록·수정·삭제와 접수 날짜 예약 기능 구현
-  - **서버별로 나눈 배포 도구** — front·shop·batch·gateway·delivery는 GitHub Actions, auth는 Jenkins로 배포하고 프론트 서버에 Nginx와 L4 로드밸런싱 적용
+  - **서버별로 나눈 배포 도구** — front·shop·batch·gateway·delivery는 GitHub Actions, auth는 Jenkins로 배포하고 Front 서버에 Nginx와 L4 로드밸런싱 적용
 
 <table>
 <tr>
@@ -331,7 +331,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 - Repository 주소: https://github.com/nhnacademy-be3-baegopa
 - 프로젝트 특징:
   - **WebSocket 실시간 알림과 트러블슈팅** — STOMP pub/sub으로 주문·배달 구독을 나누고 Redis pub/sub으로 소켓 서버 확장에 대비했으며, Gateway 경유 시 https-ws 연결이 실패하자 전용 서브도메인 인증서와 wss 통신으로 분리하고 인증은 소켓 서버 내부에서 처리
-  - **nGrinder 부하 테스트** — 1Core/1GB 인스턴스에서 Vuser 60명부터 TPS가 늘지 않고 응답 시간이 길어지며, 300명을 넘으면 프론트 서버가 다운되고 자동 복구에 약 30~40분이 걸린다는 한계 수치를 측정
+  - **nGrinder 부하 테스트** — 1Core/1GB 인스턴스에서 Vuser 60명부터 TPS가 늘지 않고 응답 시간이 길어지며, 300명을 넘으면 Front 서버가 다운되고 자동 복구에 약 30~40분이 걸린다는 한계 수치를 측정
   - **여러 가게 한 번에 결제** — 장바구니·주문·결제를 한 페이지에서 처리하고, 여러 매장의 메뉴를 단일 Toss 결제로 주문한 뒤 부분 취소·환불 지원
   - **쿠폰 발급 안정성** — RabbitMQ 3회 재시도 후 Dead Letter Queue로 실패를 기록하고, 정렬된 UUID를 `binary(16)`으로 저장해 인덱스 성능과 저장 공간 확보
   - **`Mroonga` 메뉴 검색** — 메뉴 변경 시 트리거로 검색 테이블을 자동 갱신하고 MySQL Mroonga full-text search로 메뉴명·설명 기반 매장 검색
@@ -364,7 +364,7 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
   - **검색 품질 튜닝** — 필드 특성에 맞춘 analyzer·tokenizer·filter 구성, 검색 우선순위 가중치, Dictionary 동의어·유의어 처리, `@EntityListeners`로 갱신 시각을 기록해 Logstash가 변경 도서만 색인
   - **계층별 무중단 배포** — API 서버는 Eureka 기반, Front 서버는 NHN Cloud Load Balancer 기반으로 무중단 배포를 각각 구성
   - **결제 트랜잭션 분리** — `@Transactional`의 propagation 옵션으로 결제 저장 트랜잭션을 분리하고, `@Member` 커스텀 어노테이션과 AOP로 Model에 회원 정보를 주입
-  - **토큰 수명에 맞춘 장바구니** — 회원 장바구니 쿠키는 Access Token 유효기간과 함께 갱신되고, 비회원은 2일 정책을 적용
+  - **토큰 수명에 맞춘 장바구니** — 회원 장바구니 쿠키는 Access Token 유효 기간과 함께 갱신되고, 비회원은 2일 정책을 적용
   - **공개 API 문서** — Spring REST Docs로 만든 API·쿠폰 문서를 함께 올려 자체 도메인 **ckin.store** 배포
 
 <table>
@@ -405,14 +405,14 @@ Figma로 화면을 먼저 설계하고 고객과 판매자 양쪽 기능을 갖�
 
 ##### My-Books-projects (My-Books)
 
-**My-Books**는 8주 개발 기간 안에 자체 도메인 **my-books.store** 배포까지 마친 팀으로, 장바구니를 Redis에 두되 **Phantom Key와 Pub/Sub**으로 TTL이 끝나는 순간 DB에 자동 저장해 데이터를 잃지 않게 한 구조가 눈에 띕니다. Spring Rest Docs로 만든 API 문서를 `/api-docs` 경로로 공개했습니다.
+**My-Books**는 8주 개발 기간 안에 자체 도메인 **my-books.store** 배포까지 마친 팀으로, 장바구니를 Redis에 두되 **Phantom Key와 Pub/Sub**으로 TTL이 끝나는 순간 DB에 자동 저장해 데이터를 잃지 않게 한 구조가 눈에 띕니다. Spring REST Docs로 만든 API 문서를 `/api-docs` 경로로 공개했습니다.
 
 - Repository 주소: https://github.com/My-Books-projects
 - 사용 도메인: https://www.my-books.store
 - 프로젝트 특징:
   - **만료돼도 사라지지 않는 장바구니** — 회원 장바구니는 Redis와 MySQL을 함께 쓰고, Phantom Key의 만료 이벤트를 Pub/Sub으로 받아 TTL 만료 시 DB에 자동 저장·복원, 비회원은 쿠키로 처리하고 판매 중지된 도서는 자동 제거
-  - **6가지 기준으로 정렬되는 검색** — Ngram·Nori 분석기로 검색하고 정확도(가중치)·인기도(조회수)·신상품·가격·평점·리뷰순 정렬 제공, Logstash로 입력하고 Kibana로 데이터 탐색
-  - **공개 API 문서와 커버리지** — Spring Rest Docs로 Resource API 문서를 서비스 도메인에 게시하고, Resource·Authorization API 테스트 커버리지 리포트를 공개
+  - **6가지 기준으로 정렬되는 검색** — N-gram·Nori 분석기로 검색하고 정확도(가중치)·인기도(조회수)·신상품·가격·평점·리뷰순 정렬 제공, Logstash로 입력하고 Kibana로 데이터 탐색
+  - **공개 API 문서와 커버리지** — Spring REST Docs로 Resource API 문서를 서비스 도메인에 게시하고, Resource·Authorization API 테스트 커버리지 리포트를 공개
   - **NHN Cloud 관리형 서비스 활용** — Instance·**Secure Key Manager**·Object Storage·Load Balancer를 사용하고, auth·gateway는 Jenkins, 나머지는 GitHub Actions로 배포
   - **3단계 카테고리와 도서 데이터** — 1·2·3단계 카테고리, 소개글로 구분하는 저자, 출판사·태그 관리와 Payco 로그인, Daum 주소 API 연동
   - **매일 스크럼** — 주마다 스크럼 마스터를 돌아가며 맡아 매일 오전 스크럼을 진행하고 GitHub Projects Road Map·칸반으로 진행 상황 공유
@@ -438,7 +438,7 @@ Figma로 화면을 먼저 설계하고 고객과 판매자 양쪽 기능을 갖�
 - Repository 주소: https://github.com/nhnacademy-be5-t2m
 - 사용 도메인: https://www.g2nee.shop
 - 프로젝트 특징:
-  - **발표 주제: 한글 친화 검색** — Ngram·Nori 분석기로 초성 검색과 영문 오타 교정을 지원하고, 통합·출판사·참여자·태그별 검색과 인기·신상품·가격·평점·리뷰순 정렬 제공
+  - **발표 주제: 한글 친화 검색** — N-gram·Nori 분석기로 초성 검색과 영문 오타 교정을 지원하고, 통합·출판사·참여자·태그별 검색과 인기·신상품·가격·평점·리뷰순 정렬 제공
   - **발표 주제: 인증 흐름** — Auth 서버가 JWT를 발급하고 Redis의 refresh token으로 재발급하며, Front 서버 Interceptor가 페이지 접근마다 토큰 검증·재발급과 권한 확인을 수행
   - **반품까지 고려한 포인트** — 적립·사용 내역에 주문 ID를 함께 저장해 반품 시 적립 포인트는 회수하고 사용 포인트는 반환
   - **결제 수단 확장 구조** — Factory 패턴으로 결제 수단을 추상화하고 Toss Payments 결제 성공 시 재고 반영, 배송 전 결제 취소 처리
@@ -510,15 +510,15 @@ Figma로 화면을 먼저 설계하고 고객과 판매자 양쪽 기능을 갖�
 
 ##### nhnacademy-be5-T3Team
 
-결제 금액 위변조와 동시 주문을 막는 주문 설계가 핵심인 팀입니다. 주문 시점 가격으로 임시 주문을 만들고 재고를 먼저 확보한 뒤 결제 제공처 기록과 대조해 승인하며, 결제 제공자를 바꾸기 쉽게 테이블과 서비스 구조도 다시 설계했습니다. 배포·서버 관리용 쉘 도구와 알라딘 데이터 적재용 Python 모듈도 직접 만들었습니다.
+결제 금액 위변조와 동시 주문을 막는 주문 설계가 핵심인 팀입니다. 주문 시점 가격으로 임시 주문을 만들고 재고를 먼저 확보한 뒤 결제 제공처 기록과 대조해 승인하며, 결제 제공자를 바꾸기 쉽게 테이블과 서비스 구조도 다시 설계했습니다. 배포·서버 관리용 셸 도구와 알라딘 데이터 적재용 Python 모듈도 직접 만들었습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be5-T3Team
 - 프로젝트 특징:
-  - **임시 주문과 재고 선점** — 결제 대기 임시 주문을 만들면서 재고를 비관적 락으로 차감해 먼저 결제에 들어간 사용자에게 우선권을 주고, 유효시간이 지나면 임시 주문을 폐기해 재고를 오래 붙잡지 못하게 설계
+  - **임시 주문과 재고 선점** — 결제 대기 임시 주문을 만들면서 재고를 비관적 락으로 차감해 먼저 결제에 들어간 사용자에게 우선권을 주고, 유효 시간이 지나면 임시 주문을 폐기해 재고를 오래 붙잡지 못하게 설계
   - **결제 제공자 교체가 쉬운 구조** — 결제 공통 테이블을 슈퍼타입, 제공자별 테이블을 서브타입으로 둔 IS-A 설계와 JPA 상속 매핑을 쓰고, 네이밍 컨벤션만 지키면 Factory에 자동 등록되도록 해 Toss 의존을 해소
-  - **직접 만든 배포 쉘** — Shell Script로 master·develop 외 모든 브랜치를 명령 하나로 배포하고 서버 상태 확인·종료·접속·로그 조회까지 지원하며, 인증서·키파일은 CI/CD 과정에서 동적으로 생성해 공개 저장소에서 제외
+  - **직접 만든 배포 셸** — Shell Script로 master·develop 외 모든 브랜치를 명령 하나로 배포하고 서버 상태 확인·종료·접속·로그 조회까지 지원하며, 인증서·키파일은 CI/CD 과정에서 동적으로 생성해 공개 저장소에서 제외
   - **알라딘 데이터 적재 도구** — 알라딘 카테고리 엑셀과 Open API 상품 검색으로 카테고리·도서·출판사·작가를 중복 없이 MySQL에 넣는 Python 모듈(`openAPI-python`)
-  - **자동완성 검색** — Ngram·Nori·jaso 분석기를 함께 쓰고 Elasticsearch 실시간 자동완성 제공
+  - **자동완성 검색** — N-gram·Nori·jaso 분석기를 함께 쓰고 Elasticsearch 실시간 자동완성 제공
   - **토큰 쌍 관리와 배포** — Access·Refresh 토큰을 같은 UUID로 1:1 매핑하고 로그아웃 토큰은 Redis 블랙리스트에 등록했으며, Nginx L7 로드밸런싱을 앞에 두고 자체 도메인 **t3t.shop** 배포
 
 <table>
@@ -572,7 +572,7 @@ Yes25.5는 주문 요청을 Redis 가주문으로 먼저 받아 트래픽을 분
 - 프로젝트 특징:
   - **Redis 가주문으로 주문 트래픽 분산** — 주문 시 가주문을 Redis에 저장한 뒤 확정하는 흐름으로 분산 처리하고, Redisson 설정과 주문 스케줄러를 함께 운용
   - **메시지 consumer로 쪼갠 주문 후속 처리** — 재고·장바구니·쿠폰·포인트·주문을 각각 consumer로 분리해 처리 순서와 트랜잭션 무결성을 확보, 쿠폰 서버도 웰컴·생일 쿠폰을 메시지로 발급
-  - **전략 패턴으로 결제수단·주문 상태 분기 제거** — Toss·Kakao·Naver 결제를 `PaymentStrategy`로, 취소·반품·환불을 상태 전략으로 분리하고 환불은 관리자 승인 절차로 처리
+  - **전략 패턴으로 결제 수단·주문 상태 분기 제거** — Toss·Kakao·Naver 결제를 `PaymentStrategy`로, 취소·반품·환불을 상태 전략으로 분리하고 환불은 관리자 승인 절차로 처리
   - **주문 금액 연동 배송비 정책** — 금액 구간별 배송비를 적용하고 무료 배송까지 남은 금액을 화면에 시각적으로 표시, 도서·카테고리 단위 쿠폰 적용
   - **동의어·형태소 기반 도서 검색** — Elasticsearch에 형태소 분석기와 동의어·유의어 사전을 적용하고, 도서 등록은 네이버 책 API와 NHN Cloud Image Manager 연동
   - **자체 도메인 yes25-5.shop 배포** — 시연 영상 공개, 매주 스크럼 마스터를 바꾸고 추천을 가장 많이 받은 스프린트 회고를 함께 논의하는 방식으로 운영
@@ -624,7 +624,7 @@ NovaBook(supernova)은 토큰을 열어 봐도 사용자 정보를 알 수 없�
   - **메인 페이지 6092ms에서 240ms로 단축** — 도서·카테고리 조회에 Spring Cache(Redis)를 적용해 5000개 요청 기준 약 96% 개선
   - **장바구니 TPS 약 50% 증가** — 캐시와 DB의 장점을 모두 갖도록 Redis를 DB와 동기화하고, 쿠키로 비회원 장바구니까지 저장
   - **쿠폰 발급 오류 0%와 TPS 약 10% 증가** — 높은 트래픽 대비로 쿠폰 발급에 RabbitMQ를 도입, Spring Batch로 쿠폰 만료 알림 구현
-  - **검색 속도 2.7배 개선** — nori·ngram 분석기로 Full Text Search를 구현하고 사전 정의어·동의어·금지어 적용, 배치 서버로 검색 데이터 입력과 백업 데이터 생성
+  - **검색 속도 2.7배 개선** — Nori·N-gram 분석기로 Full Text Search를 구현하고 사전 정의어·동의어·금지어 적용, 배치 서버로 검색 데이터 입력과 백업 데이터 생성
   - **Docker stats를 이용한 무중단 배포** — 배포 빈도가 높은 front·bookstore 서버에 스크립트 기반 무중단 배포를 적용, Spring REST Docs로 만든 명세를 Swagger UI로 제공
   - **자체 도메인 3runner.shop 배포** — 유튜브 시연 영상 공개, ERD를 0.05 버전까지 버전 관리하고 팀원 전원 확인 후 머지하는 PR 규칙 운영
 
@@ -671,12 +671,12 @@ CodeQuest는 회원·상품·검색·리뷰·주문/결제/환불·쿠폰·포�
 
 ##### nhnacademy-be6-AA (Buzz Book)
 
-Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결제 등 구매자가 고를 수 있는 주문 경로를 넓게 구현한 팀입니다. 서버 간 공통 코드는 buzz-book-core 모듈로 분리하고 JWT 발급은 전담 서버에 맡겼으며, Figma 화면설계서로 화면을 먼저 설계했습니다.
+Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결제 등 구매자가 고를 수 있는 주문 경로를 넓게 구현한 팀입니다. 서버 간 공통 코드는 buzz-book-core 모듈로 분리하고 JWT 발급은 전담 서버에 맡겼으며, Figma 화면 설계서로 화면을 먼저 설계했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be6-AA
 - 프로젝트 특징:
-  - **다양한 주문·결제 경로** — 회원·비회원 주문, 장바구니 주문과 바로구매, 상품별 포장 여부 선택, 쿠폰·포인트 적용과 포인트 전액 결제, Toss Payments 연동
-  - **공통 모듈 분리** — buzz-book-core와 buzz-core-batch 저장소로 공통 코드를 분리하고, JWT 토큰 반환만 담당하는 auth 서버 구성
+  - **다양한 주문·결제 경로** — 회원·비회원 주문, 장바구니 주문과 바로 구매, 상품별 포장 여부 선택, 쿠폰·포인트 적용과 포인트 전액 결제, Toss Payments 연동
+  - **공통 모듈 분리** — buzz-book-core와 buzz-core-batch 저장소로 공통 코드를 분리하고, JWT 토큰 반환만 담당하는 Auth 서버 구성
   - **홈·상세 페이지 쿠폰 다운로드** — 홈에서 아직 받지 않은 쿠폰을, 도서 상세에서 해당 도서 쿠폰을 바로 다운로드
   - **관리자 정책 관리** — 쿠폰·포인트·운임비 정책과 포장지, 주문·배송 상태를 관리자 페이지에서 관리
 
@@ -695,11 +695,11 @@ Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결�
 
 ##### nhnacademy-be6-5ritang (오리탕)
 
-오리탕은 Back-end 서버와 Frontend 서버를 각각 이중화하고 Nginx로 로드 밸런싱한 운영 구성으로 **5ritang.store**에 배포했고, 서버별 Swagger API까지 공개했습니다. ERD를 v1부터 v2.8까지 버전별로 관리하고, SonarQube 커버리지 80%를 목표로 네 개 서버를 점검했습니다.
+오리탕은 Backend 서버와 Frontend 서버를 각각 이중화하고 Nginx로 로드밸런싱한 운영 구성으로 **5ritang.store**에 배포했고, 서버별 Swagger API까지 공개했습니다. ERD를 v1부터 v2.8까지 버전별로 관리하고, SonarQube 커버리지 80%를 목표로 네 개 서버를 점검했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be6-5ritang
 - 프로젝트 특징:
-  - **백엔드·프론트 이중화** — Back-end 서버 이중화와 Frontend 서버 이중화·Nginx 로드 밸런싱으로 운영 환경 구성
+  - **백엔드·프론트 이중화** — Backend 서버 이중화와 Frontend 서버 이중화·Nginx 로드밸런싱으로 운영 환경 구성
   - **ELK 스택 기반 검색** — Elasticsearch·Logstash·Kibana를 직접 설정해 저자·도서·태그·출판사 기준 검색, 네이버·알라딘 API로 도서 정보 매핑
   - **영구 유지되는 장바구니** — 빈번한 장바구니 조회는 Redis로 최적화하고 MySQL로 영구 보관, 재고량에 따라 담기 제한
   - **리뷰 유형별 포인트 적립** — 배송 완료 도서에만 리뷰 작성, 일반 리뷰 200포인트·사진 리뷰 500포인트 적립
@@ -761,7 +761,7 @@ Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결�
   - **Flask 캐싱 API** — Java 서버와 별개로 Python Flask 기반 캐싱 API(nuri-books-caching) 저장소 운영
   - **이벤트 기반 포인트 적립** — 사용자 이벤트를 EventListener로 받아 적립하고, enum으로 포인트 규정별 전략 선택
   - **재고·쿠폰 RabbitMQ와 회원 배치** — 재고 업데이트와 도서 쿠폰 발급을 RabbitMQ로 처리, 배치로 생일 쿠폰·휴면 전환·탈퇴 회원 soft delete·등급 갱신
-  - **5단계 카테고리와 Logstash 동기화 검색** — 계층 구조로 5단계 카테고리를 구현하고, nori 한글 검색 데이터는 Logstash Docker로 DB와 동기화
+  - **5단계 카테고리와 Logstash 동기화 검색** — 계층 구조로 5단계 카테고리를 구현하고, Nori 한글 검색 데이터는 Logstash Docker로 DB와 동기화
   - **자체 도메인 nuribooks.shop 배포** — Shell script 자동 배포와 서버 이중화·Nginx 기반 무중단 배포, Payco·Naver OAuth 2.0 로그인
 
 <table>
@@ -782,12 +782,12 @@ Buzz Book은 비회원 주문, 상품별 포장 선택, 포인트만으로 결�
 
 ##### nhnacademy-be7-2joping (이조핑 북스)
 
-이조핑 북스는 ngram·nori·jaso 분석기를 조합해 초성만 입력해도 도서를 찾을 수 있는 검색을 만들었습니다. 백엔드의 오류 응답을 프론트가 redirect·forward·에러 페이지로 나눠 처리하는 공통 예외 처리 구조와, 멀티스레드로 돌린 생일 쿠폰 배치도 이 팀의 특징입니다.
+이조핑 북스는 N-gram·Nori·jaso 분석기를 조합해 초성만 입력해도 도서를 찾을 수 있는 검색을 만들었습니다. 백엔드의 오류 응답을 프론트가 redirect·forward·에러 페이지로 나눠 처리하는 공통 예외 처리 구조와, 멀티스레드로 돌린 생일 쿠폰 배치도 이 팀의 특징입니다.
 
 - Repository 주소: https://github.com/nhnacademy-be7-2joping
 - 프로젝트 특징:
-  - **초성 검색** — ngram·nori·jaso 플러그인 분석기로 형태소·초성·카테고리 검색을 지원하고, 인기도(조회수·좋아요)·신상품·가격·평점·리뷰순 정렬 제공
-  - **프론트까지 이어지는 예외 처리** — 도서 서버가 code·message·type·url·data를 담은 error response를 돌려주면 프론트 서버가 Redirect·forward·에러 페이지로 분기
+  - **초성 검색** — N-gram·Nori·jaso 플러그인 분석기로 형태소·초성·카테고리 검색을 지원하고, 인기도(조회수·좋아요)·신상품·가격·평점·리뷰순 정렬 제공
+  - **프론트까지 이어지는 예외 처리** — 도서 서버가 code·message·type·url·data를 담은 error response를 돌려주면 프론트 서버가 redirect·forward·에러 페이지로 분기
   - **멀티스레드 생일 쿠폰 배치** — 생일 쿠폰 발급 배치에 스케줄과 멀티스레드를 적용
   - **Redis 기반 토큰·장바구니 중앙화** — JWT를 redis-session으로 관리하고 비동기 요청으로 토큰 재발급, 장바구니 세션도 Redis로 중앙화
   - **배송 날짜 지정과 결제 위젯** — 주문 시 배송 날짜를 지정하고 Toss 결제 위젯으로 결제, NHN Cloud Key Manager로 DB 접속 정보 암호화
@@ -950,7 +950,7 @@ Elasticsearch에 자모 분해 토크나이저를 붙여 한글 초성 검색과
 - 프로젝트 특징:
   - **서버별 커버리지 수치 공개**: SonarQube로 라인 커버리지를 계속 측정해 backend-api 81.0%, coupon-api 80.3%, auth 81.4% 달성
   - **Redis 재고 선점**: 주문 정보를 Redis에 캐싱하고 결제 전에 상품 재고를 선점하며, 취소·반품 시 재고 복구와 Toss 결제 취소까지 묶어 처리
-  - **Logstash 연동 검색**: nori 전문 검색에 제목·카테고리 가중치를 두고, Logstash로 MySQL과 Elasticsearch를 동기화하며 Kibana로 데이터 시각화
+  - **Logstash 연동 검색**: Nori 전문 검색에 제목·카테고리 가중치를 두고, Logstash로 MySQL과 Elasticsearch를 동기화하며 Kibana로 데이터 시각화
   - **컨테이너 배포 파이프라인**: 저장소별 Dockerfile로 이미지를 빌드·실행하고 docker network로 컨테이너 간 통신을 구성했으며, 프론트 이중화에 따른 세션 정합성은 Redis 세션 스토리지로 해결하고 SSL 인증서는 60일 주기 cron으로 갱신
   - **도서·판매도서 분리 설계**: 확장성을 위해 도서와 판매도서 엔티티를 나누고, Attribute Converter로 비밀번호 암호화·날짜 변환을 DB 저장 시점에 처리
 
@@ -981,7 +981,7 @@ Elasticsearch에 자모 분해 토크나이저를 붙여 한글 초성 검색과
   - **Chunk 병렬 쿠폰 발급**: 발급 대상 사용자를 Chunk 단위로 나눠 RabbitMQ로 병렬 처리하고, 쿠폰 유형별 Queue와 Topic Exchange 라우팅, DLQ·Publisher Confirm, 실패 로그 기반 오류 검출 적용
   - **토큰 로테이션 인증 서버**: RSA 서명 Access/Refresh 토큰, 블랙리스트, Refresh 토큰 로테이션을 구현하고 Gateway JWT 필터에 비인증 경로 화이트리스트 적용
   - **재기동 없는 설정 전파**: Git 기반 Config Server로 dev/prod/test 설정을 나누고 `/actuator/busrefresh`로 배포된 서비스에 변경을 전파
-  - **망 분리 인프라**: 서브도메인 라우팅, 내부망·외부망 분리, 방화벽 포트 최소화, Docker로 RabbitMQ·MinIO·MySQL 구성, GitHub Secrets 기반 환경변수 주입
+  - **망 분리 인프라**: 서브도메인 라우팅, 내부망·외부망 분리, 방화벽 포트 최소화, Docker로 RabbitMQ·MinIO·MySQL 구성, GitHub Secrets 기반 환경 변수 주입
   - **측정 기반 개선**: 장바구니 Redis 캐싱 도입 전후 성능을 Apache Bench로 비교하고 DB 인덱스 튜닝 수행, PayType별 Resolver로 결제 수단 확장 구조 설계
 
 <table>
@@ -1002,17 +1002,17 @@ Elasticsearch에 자모 분해 토크나이저를 붙여 한글 초성 검색과
 
 ##### nhnacademy-be9-E2BS (E2BS)
 
-우수상을 받은 E2BS 팀은 기능을 만든 뒤 성능을 다시 손본 리팩토링 기록이 많습니다. 상품마다 따로 나가던 좋아요 쿼리를 DTO Projection 한 번으로 합치고, 복합 인덱스와 join fetch로 조회를 줄였으며, Toss 결제·Payco 로그인 리다이렉트 중 쿠키가 사라지는 문제는 인터셉터로 해결했습니다. 자체 도메인 **e2bs.shop**에 배포했습니다.
+우수상을 받은 E2BS 팀은 기능을 만든 뒤 성능을 다시 손본 리팩터링 기록이 많습니다. 상품마다 따로 나가던 좋아요 쿼리를 DTO Projection 한 번으로 합치고, 복합 인덱스와 join fetch로 조회를 줄였으며, Toss 결제·Payco 로그인 리다이렉트 중 쿠키가 사라지는 문제는 인터셉터로 해결했습니다. 자체 도메인 **e2bs.shop**에 배포했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be9-E2BS
 - 사용 도메인: https://www.e2bs.shop
 - 프로젝트 특징:
   - **우수상 수상**: 자체 도메인 **e2bs.shop** 배포, Cloudflare로 https 적용
-  - **쿼리 리팩토링**: 좋아요 조회를 DTO Projection 단일 쿼리로 통합하고 (customerId, productId) 복합 인덱스를 추가했으며, 리뷰는 EAGER 대신 LAZY + join fetch로 전환
+  - **쿼리 리팩터링**: 좋아요 조회를 DTO Projection 단일 쿼리로 통합하고 (customerId, productId) 복합 인덱스를 추가했으며, 리뷰는 EAGER 대신 LAZY + join fetch로 전환
   - **리다이렉트 쿠키 트러블슈팅**: 주문 상품 쿠키가 Toss 결제·Payco 로그인 리다이렉트 과정에서 유지되지 않던 문제를 인터셉터로 해결하고, MinIO의 https 자동 변환 문제는 Nginx 리버스 프록시로 해결
   - **트렌드 반영 베스트 도서**: Elasticsearch Nori·ICU 분석기와 동의어 사전 위에 조회수·검색어 트렌드를 반영한 실시간 베스트 도서와 3개월 이내 신간 조회 구현
   - **전략·레지스트리 패턴 결제**: 결제 수단 확장을 고려해 결제 서비스를 설계하고, 리다이렉트 중 주문 데이터를 지키려 재고를 선차감하며, 실패나 취소 시 포인트·쿠폰·재고를 롤백
-  - **네 가지 자동화 스케줄**: 3개월 결제액 기준 등급 조정, 10분 미결제 주문 삭제, 생일 쿠폰 발급, 배송중 1일 경과 시 배송완료 전환
+  - **네 가지 자동화 스케줄**: 3개월 결제액 기준 등급 조정, 10분 미결제 주문 삭제, 생일 쿠폰 발급, 배송 중 1일 경과 시 배송 완료 전환
 
 <table>
 <tr>
@@ -1035,10 +1035,10 @@ Elasticsearch에 자모 분해 토크나이저를 붙여 한글 초성 검색과
 - Repository 주소: https://github.com/nhnacademy-be9-bluebooktle
 - 사용 도메인: https://bluebooktle.shop
 - 프로젝트 특징:
-  - **TTL + DLQ 주문 자동 취소**: 주문 후 10분간 결제가 없으면 RabbitMQ TTL 만료 메시지로 주문을 취소하고, 배송중 3일이 지나거나 지정 배송일이 되면 배송완료로 전환
+  - **TTL + DLQ 주문 자동 취소**: 주문 후 10분간 결제가 없으면 RabbitMQ TTL 만료 메시지로 주문을 취소하고, 배송 중 3일이 지나거나 지정 배송일이 되면 배송 완료로 전환
   - **관리자 재처리 쿠폰 발급**: RabbitMQ와 Spring Batch로 생일·직접 발급 쿠폰을 대량 처리하고, ShedLock으로 스케줄 중복 실행을 막으며, DLQ 메시지를 DB에 저장해 관리자가 재처리
   - **포인트 트랜잭션 분리**: 포인트 적립을 회원가입·로그인 트랜잭션과 분리해 포인트 쪽 장애가 가입·로그인을 막지 않도록 하고, 환불은 반품 배송비를 뺀 금액을 포인트로 지급
-  - **멀티모듈과 커버리지 자동화**: 멀티모듈 구조로 설계하고 Jacoco·SonarQube 리포트를 CI에 연결해 커버리지 80% 이상 유지
+  - **멀티모듈과 커버리지 자동화**: 멀티모듈 구조로 설계하고 JaCoCo·SonarQube 리포트를 CI에 연결해 커버리지 80% 이상 유지
   - **Config Server 운영 문서**: 비공개 Git 설정 저장소를 SSH Deploy Key와 HttpBasic 보안으로 연결하는 절차를 기술 문서 저장소에 정리
 
 <table>
@@ -1062,11 +1062,11 @@ Elasticsearch에 자모 분해 토크나이저를 붙여 한글 초성 검색과
 
 ##### nhnacademy-be10-BeanSolid (BeanSolid)
 
-BeanSolid 팀은 Cloudflare 뒤의 Nginx가 프론트 2대에, Gateway가 다시 API 인스턴스에 Round Robin으로 요청을 나누는 2단계 분산 구조를 만들고 부하(스트레스) 테스트로 확인했습니다. 휴면 계정 인증은 Redis로 처리했고, 서비스별 API 명세를 통합 명세서 페이지 하나로 모았습니다. 자체 도메인 **bookstore-beansolid.store**에 배포했습니다.
+BeanSolid 팀은 Cloudflare 뒤의 Nginx가 Front 서버 2대에, Gateway가 다시 API 인스턴스에 Round Robin으로 요청을 나누는 2단계 분산 구조를 만들고 부하(스트레스) 테스트로 확인했습니다. 휴면 계정 인증은 Redis로 처리했고, 서비스별 API 명세를 통합 명세서 페이지 하나로 모았습니다. 자체 도메인 **bookstore-beansolid.store**에 배포했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be10-BeanSolid
 - 프로젝트 특징:
-  - **2단계 Round Robin 분산**: Nginx가 프론트 2대에, Gateway가 Eureka에 등록된 API 인스턴스에 각각 Round Robin으로 요청을 분산
+  - **2단계 Round Robin 분산**: Nginx가 Front 서버 2대에, Gateway가 Eureka에 등록된 API 인스턴스에 각각 Round Robin으로 요청을 분산
   - **부하 테스트와 캐시**: 부하(스트레스) 테스트를 수행하고 Spring Cache 적용
   - **Redis 휴면 계정 인증**: 3개월 이상 미로그인 시 휴면으로 전환하고, 해제 인증을 Redis로 구현
   - **통합 API 명세서**: user·book·order·coupon·auth 서비스별 명세서를 만들고 통합 명세서 페이지로 연결
@@ -1152,7 +1152,7 @@ DoDream 팀은 Logstash가 MySQL 변경을 감지해 Elasticsearch 인덱스를 
   - **Logstash 자동 색인**: Logstash가 MySQL을 주기적으로 확인해 변경 사항을 Elasticsearch에 반영하고, 가중치·다양한 정렬·동의어/유의어 검색 적용
   - **이벤트 구동 쿠폰 발급**: User 서비스가 가입·구매 이벤트를 RabbitMQ로 발행하면 Coupon 서비스가 소비해 Welcome·생일·도서·카테고리 쿠폰 발급
   - **실행 검증 PR 게이트**: PR마다 빌드 후 서버를 실행해 Health Check 성공 여부를 확인해야 머지되고, main 반영 시 자동 배포
-  - **두 외부 도서 API**: 알라딘과 네이버 API로 도서를 등록하고 TUI Editor로 상세 정보 편집
+  - **두 외부 도서 API**: 알라딘과 네이버 API로 도서를 등록하고 TOAST UI Editor로 상세 정보 편집
   - **배치 회원 관리**: 휴면 전환과 등급 변경을 배치로 처리하고, 휴면 해제는 메신저 인증으로 지원
 
 <table>
@@ -1175,10 +1175,10 @@ DoDream 팀은 Logstash가 MySQL 변경을 감지해 Elasticsearch 인덱스를 
 
 - Repository 주소: https://github.com/nhnacademy-be10-WannaB
 - 프로젝트 특징:
-  - **블루그린·롤링 무중단 배포** — Docker 컨테이너 기반 CI/CD 파이프라인에 블루그린과 롤링 배포를 적용하고 Nginx로 로드 밸런싱·리버스 프록시를 구성
+  - **블루그린·롤링 무중단 배포** — Docker 컨테이너 기반 CI/CD 파이프라인에 블루그린과 롤링 배포를 적용하고 Nginx로 로드밸런싱·리버스 프록시를 구성
   - **커밋 이후 비동기 후속 처리** — 결제 완료·트랜잭션 커밋 뒤 이벤트 리스너가 포인트 차감/적립, 쿠폰 처리, 도서 재고 차감을 RabbitMQ 비동기 요청으로 보내고, 주문 완료 메일도 이벤트로 발송
   - **다중 서버를 전제한 주문 상태 관리** — 주문 임시 정보를 Redis에 두고 스케줄러로 주문 TTL을 처리하며, 환불·취소 시 포인트를 롤백
-  - **초성까지 지원하는 한국어 검색** — nori·jaso 분석기, 인덱스 필드 가중치 통합 검색, 초성 저장 파이프라인으로 초성 검색 구현
+  - **초성까지 지원하는 한국어 검색** — Nori·jaso 분석기, 인덱스 필드 가중치 통합 검색, 초성 저장 파이프라인으로 초성 검색 구현
   - **API 문서·계약 테스트** — Spring REST Docs 문서화, JaCoCo 커버리지 측정, Spring Cloud Contract Stub Runner 기반 테스트, 카테고리 계층 조회는 Spring Cache로 개선
 
 <table>
@@ -1228,11 +1228,11 @@ DoDream 팀은 Logstash가 MySQL 변경을 감지해 Elasticsearch 인덱스를 
 
 ##### nhnacademy-be11-bookscamp (BooksCamp)
 
-도서 15만 건을 임베딩해 Elasticsearch 벡터 검색, Ollama, Re-ranker, Gemini로 이어지는 RAG 검색 파이프라인을 만든 팀입니다. 매일 자정 Gemini가 상위 리뷰를 한줄평으로 요약하고, PG사를 Adapter로 갈아 끼울 수 있는 결제 구조를 갖췄으며 자체 도메인 **chxxry.bookscamp.store**에 배포했습니다.
+도서 15만 건을 임베딩해 Elasticsearch 벡터 검색, Ollama, Reranker, Gemini로 이어지는 RAG 검색 파이프라인을 만든 팀입니다. 매일 자정 Gemini가 상위 리뷰를 한줄평으로 요약하고, PG사를 Adapter로 갈아 끼울 수 있는 결제 구조를 갖췄으며 자체 도메인 **chxxry.bookscamp.store**에 배포했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-be11-bookscamp
 - 프로젝트 특징:
-  - **15만 건 대상 RAG 검색** — 도서 데이터를 MySQL에 적재하고 텍스트 임베딩을 Elasticsearch 벡터 저장소에 넣은 뒤, Ollama·Re-ranker API와 Gemini-flash 모델로 결과를 검증하고 응답을 생성
+  - **15만 건 대상 RAG 검색** — 도서 데이터를 MySQL에 적재하고 텍스트 임베딩을 Elasticsearch 벡터 저장소에 넣은 뒤, Ollama·Reranker API와 Gemini-flash 모델로 결과를 검증하고 응답을 생성
   - **Gemini 리뷰 한줄평** — 도서 정보와 상위 리뷰 5개를 한줄평으로 요약해 상세 페이지에 노출하고 스케줄러로 매일 자정 갱신
   - **Adapter·Strategy 결제 설계** — `PaymentAdapter` 인터페이스로 PG사 추가 시 구현체만 추가하고, 결제 수단(CARD, POINT)을 Strategy로 분리하며 포인트 전액 결제는 0원 내부 결제로 처리
   - **가입 트랜잭션과 혜택 지급 분리** — 회원가입 포인트·쿠폰을 RabbitMQ 이벤트로 지급해 가입 트랜잭션으로의 장애 전파를 차단
@@ -1322,10 +1322,10 @@ DoDream 팀은 Logstash가 MySQL 변경을 감지해 Elasticsearch 인덱스를 
 - 프로젝트 특징:
   - **Saga 분산 트랜잭션** — 주문 생성·취소·환불을 Orchestration Saga로 구현하고, 중단된 트랜잭션은 스케줄러로 복구하며 멱등성 키로 중복 요청을 차단, 포인트는 보상 트랜잭션으로 정합성 유지
   - **안전장치를 갖춘 AI 검색** — Ollama 1024차원 임베딩으로 Elasticsearch kNN(cosine, `int8_hnsw`) 검색 후 Reranker와 Gemini가 상위 결과를 재정렬·검증하고 추천 이유를 작성, 장애 시 BM25 fallback과 TopK 제한·타임아웃·캐시 적용
-  - **필드 가중치 BM25** — nori 분석기와 제목 > 저자 > 태그 > ISBN > 출판사 > 설명 > 리뷰 순 가중치로 키워드 검색을 구성하고, 도서 변경은 인덱스에 Upsert/Delete로 동기화
+  - **필드 가중치 BM25** — Nori 분석기와 제목 > 저자 > 태그 > ISBN > 출판사 > 설명 > 리뷰 순 가중치로 키워드 검색을 구성하고, 도서 변경은 인덱스에 Upsert/Delete로 동기화
   - **Write-Back 장바구니** — 장바구니 연산을 모두 Redis에서 처리하고 스케줄러로 DB에 지연 쓰기, 90일이 지난 상품은 자동 삭제
   - **GitHub Actions 스케줄 배치** — 포트 여유와 기존 CI를 고려해 Jenkins 대신 GitHub Actions를 스케줄러로 쓰고 Spring Batch로 생일 쿠폰·휴면 회원·등급 갱신 처리
-  - **EFK 로그와 메신저 알림** — 오류 분석용 로그를 설계해 EFK로 수집하고 메신저 알림을 연결, 게이트웨이에 몰려 있던 인증 로직은 별도 서버로 분리
+  - **EFK 로그와 메신저 알림** — 오류 분석용 로그를 설계해 EFK로 수집하고 메신저 알림을 연결, Gateway에 몰려 있던 인증 로직은 별도 서버로 분리
 
 <table>
 <tr>
@@ -1354,7 +1354,7 @@ DoDream 팀은 Logstash가 MySQL 변경을 감지해 Elasticsearch 인덱스를 
   - **서버별 테스트 커버리지 공개** — 프론트·회원·도서·주문·결제·쿠폰 서버 각각의 커버리지 결과를 README에 첨부
   - **Dooray Messenger 휴면 해제** — Dooray Messenger API 인증으로 휴면 계정을 해제하고 일반·로열·골드·플래티넘 등급과 회원당 최대 10개 주소록을 운영
   - **주문 옵션과 복합 결제** — 배송일 지정·선물 포장 옵션, 로그인 시 비회원 장바구니 병합, Toss Payments와 포인트·쿠폰 복합 결제
-  - **Tui Editor와 레이아웃 모듈화** — Thymeleaf Layout으로 공통 레이아웃을 모듈화하고 도서 설명·리뷰 작성에 Tui Editor 적용
+  - **TOAST UI Editor와 레이아웃 모듈화** — Thymeleaf Layout으로 공통 레이아웃을 모듈화하고 도서 설명·리뷰 작성에 TOAST UI Editor 적용
 
 <table>
 <tr>
@@ -1404,11 +1404,11 @@ DATABO3는 실내 쾌적함을 유지하면서 에너지를 아끼는 것을 목
 
 ##### nhnacademy-aiot1-TXT (TxT)
 
-Smart Academy는 실내 온도·습도·재실 인원을 보고 에어컨을 켤지 판단하는 XGBoost 모델을 직접 학습해 장치 제어에 연결했습니다. 로지스틱 회귀·랜덤 포레스트와 비교한 분석 과정을 남겼고, 장치 제어 서버를 따로 분리해 자체 도메인 **contxt.co.kr**에 배포했습니다.
+Smart Academy는 실내 온도·습도·재실 인원을 보고 에어컨을 켤지 판단하는 XGBoost 모델을 직접 학습해 장치 제어에 연결했습니다. 로지스틱 회귀·Random Forest와 비교한 분석 과정을 남겼고, 장치 제어 서버를 따로 분리해 자체 도메인 **contxt.co.kr**에 배포했습니다.
 
 - Repository 주소: https://github.com/nhnacademy-aiot1-TXT
 - 프로젝트 특징:
-  - **에어컨 ON/OFF 예측 모델** — 결측치·이상치를 처리한 InfluxDB 센서 데이터로 로지스틱 회귀·랜덤 포레스트·XGBoost를 비교한 뒤 XGBoost를 선택하고, 학습된 모델을 NHN Cloud Object Storage에 업로드
+  - **에어컨 ON/OFF 예측 모델** — 결측치·이상치를 처리한 InfluxDB 센서 데이터로 로지스틱 회귀·Random Forest·XGBoost를 비교한 뒤 XGBoost를 선택하고, 학습된 모델을 NHN Cloud Object Storage에 업로드
   - **가설 기반 데이터 분석** — 실내 온습도 임계값, 재실 인원, 실외 온습도가 에어컨 작동에 주는 영향을 가설로 세워 검증
   - **장치 제어 서버 분리** — 자동·수동 장치 제어를 전담하는 TxT-device-control, 룰 엔진, AI 예측 서비스를 별도 저장소로 구성
   - **5종 센서와 기상청 데이터** — 온도·습도·공기질·재실 감지·조명 센서를 수집하고 기상청 날씨 정보를 함께 가공
@@ -1468,7 +1468,7 @@ Smoothing은 24시간 전력 수요 예측을 근거로 경부하 시간대에 �
   - **R 기반 전처리 파이프라인** — 스케줄링으로 InfluxDB에서 데이터를 가져와 `-Inf`/`Inf` 값과 결측치를 처리하고 정규화한 뒤 다시 InfluxDB에 저장하고, Python 머신러닝 서버가 이 데이터로 이상치를 탐지
   - **모터 가동률 대시보드** — 전체·가동 중·비정상 모터 수, 일·주·월별 가동률, 구역별 요약, 모터별 상태와 시간별 변화 추이를 제공
   - **이상 알림과 리포트 메일** — 이슈가 생기면 Dooray Hook 메시지를 보내고, ADMIN 사용자 전원에게 HTML 리포트 메일을 발송
-  - **사내 Maven 저장소 운영** — 공통 라이브러리를 갱신하면 GitHub 기반 Maven 저장소에 자동 배포하고 Dooray로 알리며, 프론트 서버는 2중화로 운영
+  - **사내 Maven 저장소 운영** — 공통 라이브러리를 갱신하면 GitHub 기반 Maven 저장소에 자동 배포하고 Dooray로 알리며, Front 서버는 이중화로 운영
 
 <table>
 <tr>
@@ -1486,14 +1486,14 @@ Smoothing은 24시간 전력 수요 예측을 근거로 경부하 시간대에 �
 
 ##### nhnacademy-aiot1-5
 
-**아이오티타임(IOTEATIME)**은 사용자가 정한 한 달 전기요금 예산을 기준으로, 이번 달 요금이 예산을 넘을지 미리 알려 주는 스마트 전력 관리 시스템입니다. Prophet 모델로 채널별 월 사용량을 예측하고 배치 작업으로 실제·예측 전기요금을 계산해 예산 대비 현황을 보여 주며, 환경 센서를 근거로 UC300 장치를 제어해 전력을 조절합니다.
+**아이오티타임(IOTEATIME)**은 사용자가 정한 한 달 전기 요금 예산을 기준으로, 이번 달 요금이 예산을 넘을지 미리 알려 주는 스마트 전력 관리 시스템입니다. Prophet 모델로 채널별 월 사용량을 예측하고 배치 작업으로 실제·예측 전기 요금을 계산해 예산 대비 현황을 보여 주며, 환경 센서를 근거로 UC300 장치를 제어해 전력을 조절합니다.
 
 - Repository 주소: https://github.com/nhnacademy-aiot1-5
 - 프로젝트 특징:
   - **교차 검증으로 튜닝한 Prophet 예측** — 주말·계절·추세 하이퍼파라미터를 교차 검증해 RMSE가 가장 작은 조합을 고르고, 사용량 변화가 없는 채널은 학습 없이 0으로 처리. 매일 0시 5분 이상치 기준 계산, 0시 10분 예측이 자동 실행
-  - **Tasklet 배치 전기요금 계산** — 일·월별 실제 사용량과 일별 예측치 각각에 대해 전기요금을 계산해 누적 요금, 예측 요금, 요금 게이지 차트와 요금 추천 UI로 제공
-  - **브릿지 서버와 룰체인** — 브릿지 서버가 MQTT·Modbus 센서 데이터를 RabbitMQ로 발행하고, 룰 엔진이 큐의 데이터를 룰체인에 통과시켜 Modbus 파싱, InfluxDB 저장, 이상치 감지와 프론트·API·컨트롤 서버 전송을 처리
-  - **원격 브릿지 프로비저닝** — 룰 엔진이 브릿지 프로퍼티를 만들어 외부 인스턴스에 scp로 보내고 스크립트를 실행해 새 브릿지를 띄우며, Modbus 매핑 테이블을 갱신
+  - **Tasklet 배치 전기 요금 계산** — 일·월별 실제 사용량과 일별 예측치 각각에 대해 전기 요금을 계산해 누적 요금, 예측 요금, 요금 게이지 차트와 요금 추천 UI로 제공
+  - **브리지 서버와 룰 체인** — 브리지 서버가 MQTT·Modbus 센서 데이터를 RabbitMQ로 발행하고, 룰 엔진이 큐의 데이터를 룰 체인에 통과시켜 Modbus 파싱, InfluxDB 저장, 이상치 감지와 Front·API·컨트롤 서버 전송을 처리
+  - **원격 브리지 프로비저닝** — 룰 엔진이 브리지 프로퍼티를 만들어 외부 인스턴스에 scp로 보내고 스크립트를 실행해 새 브리지를 띄우며, Modbus 매핑 테이블을 갱신
   - **조직 단위 권한 제어** — `@AdminOnly` AOP와 조직 코드 검증 AOP로 접근을 제한하고, 권한별 사이드바와 datatables 기반 관리자 페이지에서 예산·조직·사용자를 관리
 
 <table>
@@ -1547,7 +1547,7 @@ Smoothing은 24시간 전력 수요 예측을 근거로 경부하 시간대에 �
 - 사용 도메인: https://javame.live
 - 프로젝트 특징:
   - **서버 지표를 IoT 경로로 수집** — 사용자 서버의 OpenTelemetry·Telegraf 데이터를 Collector의 Node-RED가 MQTT로 변환하고, `trans-service`가 MQTT/Kafka로 받아 이상치 검증·전처리 후 회사·서버·센서 태그를 붙여 InfluxDB에 저장
-  - **멀티 테넌트 자원 사용량 예측** — 컨테이너 하나가 회사와 디바이스를 동적으로 감지해 모두 처리하면서 CPU·메모리·디스크 사용률을 예측하고, 정기 재학습과 예측 성능 모니터링을 자동화. 전력량과 서버룸 환경변수로 사용량을 예측하는 AI도 별도로 구성
+  - **멀티 테넌트 자원 사용량 예측** — 컨테이너 하나가 회사와 디바이스를 동적으로 감지해 모두 처리하면서 CPU·메모리·디스크 사용률을 예측하고, 정기 재학습과 예측 성능 모니터링을 자동화. 전력량과 서버룸 환경 변수로 사용량을 예측하는 AI도 별도로 구성
   - **임계치 판정과 다채널 경보** — `rule-api`에 등록한 서버·센서 임계치를 `trans-service`가 주기적으로 조회해 판정하고, `warnify-service`가 회사 도메인별로 SMS·Email·Dooray 중 선택하거나 한꺼번에 알림을 보냄
   - **목표를 넘긴 테스트 커버리지** — 라인 커버리지 목표 80%를 두고 `rule-api` 93.9%, `warnify-service` 85.3%를 달성했으며 SonarQube로 품질을 검증
   - **트리·시계열 대시보드와 리포트** — 서버와 센서의 gateway·device를 트리로 보여 주고 통합·시계열 화면, AI 예측 차트, 주간·월간 리포트를 제공하며 WebSocket으로 실시간 값을 갱신
@@ -1573,7 +1573,7 @@ Smoothing은 24시간 전력 수요 예측을 근거로 경부하 시간대에 �
 - Repository 주소: https://github.com/nhnacademy-aiot2-pangyo-coffee-legends
 - 프로젝트 특징:
   - **EDA 기반 쾌적도 모델** — 12개 센서 변수의 시간대·장소별 패턴과 상관관계(예: 온도-조도 0.96)를 분석해 아침 CO₂가 1,468ppm까지 오르는 구간과 23.5°C 부근의 불쾌지수 70 임계점을 찾았고, FastAPI `comfort-model`이 CO₂·온도·습도·면적당 CO₂로 K-means 3개 클러스터를 학습해 결과를 룰 엔진에 전달
-  - **Gemini 근태 분석과 PDF 리포트** — 사원 근태 기록을 Gemini 2.0 Flash로 분석해 Chart.js로 시각화하고, 사원별 분석 쓰레드와 대화 이력을 저장하며, 클릭 한 번으로 요약표·바 차트·도넛 차트가 담긴 iText PDF를 생성
+  - **Gemini 근태 분석과 PDF 리포트** — 사원 근태 기록을 Gemini 2.0 Flash로 분석해 Chart.js로 시각화하고, 사원별 분석 스레드와 대화 이력을 저장하며, 클릭 한 번으로 요약표·바 차트·도넛 차트가 담긴 iText PDF를 생성
   - **출입 기록 기반 근태 계산** — 출입 데이터로 근무 시간과 출근·지각·반차 등 출결 상태를 계산하고, 1분 단위 출입 현황을 WebSocket으로 전송하며 이상 출입은 관리자 이메일과 화면 경고로 알림
   - **동적 룰 엔진** — 룰 그룹·조건·액션을 런타임에 등록·수정하고, 평가 결과를 RabbitMQ 비동기 알림과 Feign 호출로 다른 서비스에 전파
   - **회의실·채팅·로그 운영** — 예약·입장·노쇼·연장을 다루는 회의실 예약, STOMP 실시간 채팅과 알림 팝업, Filebeat→Logstash→Elasticsearch→Kibana 로그 모니터링
