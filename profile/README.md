@@ -3,7 +3,7 @@
 NHN Academy 부트캠프 운영에 사용되는 GitHub Organization입니다.
 Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까지 단계적으로 학습하는 교육용 저장소 모음입니다.
 
-> 전체 **48**개 repository (공개 **6**개 · 비공개 **42**개)
+> 전체 **47**개 repository (공개 **6**개 · 비공개 **41**개)
 >
 > 비공개 repository는 nhnacademy-bootcamp 조직 멤버만 열람할 수 있습니다.
 
@@ -37,7 +37,6 @@ Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까
 | [java-thread](https://github.com/nhnacademy-bootcamp/java-thread) | 비공개 | TODO 기반 스레드 교재 |
 | [java-thread-exercise](https://github.com/nhnacademy-bootcamp/java-thread-exercise) | 비공개 | 스레드 예제 코드 실습 |
 | [java-thread-nhnmart-exercise](https://github.com/nhnacademy-bootcamp/java-thread-nhnmart-exercise) | 비공개 | 스레드 기반 NHNMart 구현 실습 |
-| [java-thread-exam01](https://github.com/nhnacademy-bootcamp/java-thread-exam01) | 비공개 | 스레드 시험 |
 
 ## 네트워크 프로그래밍
 
