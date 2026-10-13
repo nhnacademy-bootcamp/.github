@@ -3,7 +3,7 @@
 NHN Academy 부트캠프 운영에 사용되는 GitHub Organization입니다.
 Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까지 단계적으로 학습하는 교육용 저장소 모음입니다.
 
-> 전체 **49**개 repository (공개 **6**개 · 비공개 **43**개)
+> 전체 **48**개 repository (공개 **6**개 · 비공개 **42**개)
 >
 > 비공개 repository는 nhnacademy-bootcamp 조직 멤버만 열람할 수 있습니다.
 
@@ -19,7 +19,6 @@ Java 기초부터 네트워크, 데이터베이스, Spring, Spring AI, DevOps까
 
 | Repository | 공개 여부 | 설명 |
 |---|:---:|---|
-| [introduction-to-programming-using-java](https://github.com/nhnacademy-bootcamp/introduction-to-programming-using-java) | 비공개 | Java를 이용한 프로그래밍 입문 교재 |
 | [java-basics-hands-on](https://github.com/nhnacademy-bootcamp/java-basics-hands-on) | 비공개 | Java 기초 실습 |
 | [java-programming](https://github.com/nhnacademy-bootcamp/java-programming) | 공개 | Java 프로그래밍 |
 | [java-graphics](https://github.com/nhnacademy-bootcamp/java-graphics) | 공개 | Java 그래픽스 |
