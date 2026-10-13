@@ -463,12 +463,11 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <tr>
 <td align="center"><a href="https://github.com/hydrationn"><img src="https://github.com/hydrationn.png" width="90" alt="hydrationn"/><br /><sub><b>hydrationn</b><br />hydrationn</sub></a></td>
 <td align="center"><a href="https://github.com/joohyun1996"><img src="https://github.com/joohyun1996.png" width="90" alt="joohyun1996"/><br /><sub><b>JooH</b><br />joohyun1996</sub></a></td>
-<td align="center"><a href="https://github.com/PARKJONGGYEONG"><img src="https://github.com/PARKJONGGYEONG.png" width="90" alt="PARKJONGGYEONG"/><br /><sub><b>PARKJONGGYEONG</b><br />PARKJONGGYEONG</sub></a></td>
 <td align="center"><a href="https://github.com/parkjonggyeong18"><img src="https://github.com/parkjonggyeong18.png" width="90" alt="parkjonggyeong18"/><br /><sub><b>parkjonggyeong18</b><br />parkjonggyeong18</sub></a></td>
 <td align="center"><a href="https://github.com/PyeonMinjun"><img src="https://github.com/PyeonMinjun.png" width="90" alt="PyeonMinjun"/><br /><sub><b>PyeonMinjun</b><br />PyeonMinjun</sub></a></td>
+<td align="center"><a href="https://github.com/woody35545"><img src="https://github.com/woody35545.png" width="90" alt="woody35545"/><br /><sub><b>Woody_K</b><br />woody35545</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/woody35545"><img src="https://github.com/woody35545.png" width="90" alt="woody35545"/><br /><sub><b>Woody_K</b><br />woody35545</sub></a></td>
 <td align="center"><a href="https://github.com/Yujin-nKim"><img src="https://github.com/Yujin-nKim.png" width="90" alt="Yujin-nKim"/><br /><sub><b>Yujin Kim</b><br />Yujin-nKim</sub></a></td>
 </tr>
 </table>
@@ -767,7 +766,6 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <td align="center"><a href="https://github.com/kyubinleee"><img src="https://github.com/kyubinleee.png" width="90" alt="kyubinleee"/><br /><sub><b>kyubinleee</b><br />kyubinleee</sub></a></td>
 </tr>
 <tr>
-<td align="center"><a href="https://github.com/kyubinleeee"><img src="https://github.com/kyubinleeee.png" width="90" alt="kyubinleeee"/><br /><sub><b>kyubinleeee</b><br />kyubinleeee</sub></a></td>
 <td align="center"><a href="https://github.com/noah-cha"><img src="https://github.com/noah-cha.png" width="90" alt="noah-cha"/><br /><sub><b>noahchae</b><br />noah-cha</sub></a></td>
 <td align="center"><a href="https://github.com/Que-Sera-Sera-Today"><img src="https://github.com/Que-Sera-Sera-Today.png" width="90" alt="Que-Sera-Sera-Today"/><br /><sub><b>Que-Sera-Sera-Today</b><br />Que-Sera-Sera-Today</sub></a></td>
 <td align="center"><a href="https://github.com/whskgys"><img src="https://github.com/whskgys.png" width="90" alt="whskgys"/><br /><sub><b>whskgys</b><br />whskgys</sub></a></td>
@@ -1076,7 +1074,6 @@ BE 과정의 최종 팀 프로젝트는 MSA 기반 온라인 서점 구축입니
 <tr>
 <td align="center"><a href="https://github.com/kiju-dev"><img src="https://github.com/kiju-dev.png" width="90" alt="kiju-dev"/><br /><sub><b>kiju-dev</b><br />kiju-dev</sub></a></td>
 <td align="center"><a href="https://github.com/KKahyun"><img src="https://github.com/KKahyun.png" width="90" alt="KKahyun"/><br /><sub><b>KKahyun</b><br />KKahyun</sub></a></td>
-<td align="center"><a href="https://github.com/taketaektech"><img src="https://github.com/taketaektech.png" width="90" alt="taketaektech"/><br /><sub><b>Yongtaek Lee</b><br />taketaektech</sub></a></td>
 <td align="center"><a href="https://github.com/Yoon-Bin99"><img src="https://github.com/Yoon-Bin99.png" width="90" alt="Yoon-Bin99"/><br /><sub><b>YoonBin</b><br />Yoon-Bin99</sub></a></td>
 </tr>
 </table>
